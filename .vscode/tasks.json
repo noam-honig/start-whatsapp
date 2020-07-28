@@ -10,6 +10,16 @@
 			"label": "npm: start",
 			"detail": "ng serve",
 			"isBackground": true
+		},
+		{
+			"type": "npm",
+			"script": "build",
+			"problemMatcher": [
+				"$tsc"
+			],
+			"group": "build",
+			"label": "npm: build",
+			"detail": "ng build --prod --output-path docs --base-href /start-whatsapp/"
 		}
 	]
 }
