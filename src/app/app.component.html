@@ -5,12 +5,10 @@
       <mat-label>מספר טלפון</mat-label>
       <input matInput type="tel" [(ngModel)]="phone" cdkFocus [ngModelOptions]="{standalone: true}">
     </mat-form-field>
-    
-      <button mat-mini-fab color="accent" style="background-color:#0DC143" aria-label="open whatsapp" type="submit">
-        <mat-icon>chat</mat-icon>
-      </button>
-    
 
-
+    <button mat-mini-fab color="accent" style="background-color:#0DC143" aria-label="open whatsapp" type="submit">
+      <mat-icon>chat</mat-icon>
+    </button>
   </form>
+  <a href="~" (click)="phone=''">נקה</a>
 </mat-card>
