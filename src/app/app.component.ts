@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'start-whatsapp';
+  phone: string;
+  openWhatsapp() {
+    let p = this.phone.replace(/\D/g, '');
+    if (p.startsWith('0'))
+      p = p.substring(1);
+    window.open('https://wa.me/' + p);
+  }
 }
