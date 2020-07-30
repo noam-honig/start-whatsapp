@@ -10,7 +10,9 @@ export class AppComponent {
   openWhatsapp() {
     let p = this.phone.replace(/\D/g, '');
     if (p.startsWith('0'))
+      p = '972' + p.substring(1);
+    else if (p.startsWith('+'))
       p = p.substring(1);
-    window.open('https://wa.me/972' + p);
+    window.open('https://wa.me/' + p);
   }
 }
